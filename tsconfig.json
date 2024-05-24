@@ -1,25 +1,33 @@
 {
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "public/mockServiceWorker.js", "**/*.hbs"],
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
+    /* Language and Environment */
+    "target": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "jsx": "react-jsx",
-
-    /* Linting */
+    "moduleDetection": "auto",
+    "types": ["vite/client", "jest", "node"],
+    /* Modules */
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    /* Emit */
+    "noEmit": true,
+    /* Interop Constraints */
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": false,
+    "forceConsistentCasingInFileNames": true,
+    /* Type Checking */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+    "noFallthroughCasesInSwitch": true,
+    /* Completeness */
+    "skipLibCheck": true,
+    "paths": {
+      "@assets/*": ["./src/assets/*"]
+    }
+  }
 }
