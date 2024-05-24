@@ -1,0 +1,36 @@
+{
+  "name": "vite-app-1",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "vite",
+    "dev:mock": "cross-env VITE_API=mock vite",
+    "test": "vite test",
+    "format": "npm run format:eslint && npm run format:prettier",
+    "format:eslint": "npm run lint:eslint -- --fix",
+    "format:prettier": "npm run lint:prettier -- --write",
+    "lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:ts",
+    "lint:eslint": "eslint \"**/*.{js,ts,tsx}\"",
+    "lint:prettier": "prettier \"**/*.{json,js,ts,tsx}\" --check",
+    "lint:ts": "tsc --noEmit",
+    "generate": "vite generate",
+    "clean": "rimraf node_modules"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@atomazing/eslint-config": "1.0.7",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "8.56.0",
+    "prettier": "2.8.8",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  }
+}
