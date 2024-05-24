@@ -1,13 +1,27 @@
 {
-  "include": ["./src/**/*"],
-  "exclude": ["node_modules", "public/mockServiceWorker.js", "**/*.hbs"],
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "public/mockServiceWorker.js",
+    "**/*.hbs"
+  ],
   "compilerOptions": {
     /* Language and Environment */
     "target": "esnext",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "jsx": "react-jsx",
     "moduleDetection": "auto",
-    "types": ["vite/client", "jest", "node"],
+    "types": [
+      "vite/client",
+      "jest",
+      "node"
+    ],
     /* Modules */
     "module": "esnext",
     "moduleResolution": "node",
@@ -27,7 +41,9 @@
     /* Completeness */
     "skipLibCheck": true,
     "paths": {
-      "@assets/*": ["./src/assets/*"]
+      "@assets/*": [
+        "./src/assets/*"
+      ]
     }
   }
 }
